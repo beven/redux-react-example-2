@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import uuidv1 from 'uuid';
 import { addArticle } from "../actions/index";
 
-const mapDispathToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
     return {
         // 'addArticleWhenSubmit' gets called in handleSubmit method
         addArticleWhenSubmit: article => dispatch(addArticle(article))
@@ -50,7 +50,7 @@ class ConnectedForm extends Component {
     }
 }
 
-const Form = connect(null, mapDispathToProps)(ConnectedForm);
+const Form = connect(null, mapDispatchToProps)(ConnectedForm);
 
 export default Form;
 
